@@ -1,2 +1,2 @@
 # UAMS_CNN
-Same project using can model for identifying drowsy persons in a crowd 
+Same project using cnn model for identifying drowsy persons in a crowd 
