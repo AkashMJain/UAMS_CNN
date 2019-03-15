@@ -4,6 +4,9 @@ import cv2
 from keras.models import load_model
 import numpy as np
 
+'''
+I think it is not complete :-(
+'''
 
 class UAMS_CNN(object):
     """docstring for UAMS_CNN"""

@@ -23,8 +23,8 @@ class DataManager(object):
         elif self.dataset_name == 'fer2013':
             self.dataset_path = '../datasets/fer2013/fer2013.csv'
 
-        elif self.dataset_name == 'uams-dataset'
-            self.dataset_path == 'datasets/uams/demo.csv'
+        elif self.dataset_name == 'uams-dataset':
+            self.dataset_path = 'datasets/uams/uams-dataset.csv'
 
         else:
             raise Exception(
@@ -39,7 +39,10 @@ class DataManager(object):
         return ground_truth_data
 
     def _load_UAMSEmotion(self):
+        print("hello")
+        print(self.dataset_path)
         data = pd.read_csv(self.dataset_path)
+        print("i think you should reah here")
         pixels = data['pixels'].tolist()
         width, height = 48, 48
         faces = []
