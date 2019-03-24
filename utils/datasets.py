@@ -44,7 +44,8 @@ class DataManager(object):
         data = pd.read_csv(self.dataset_path)
         print("i think you should reah here")
         pixels = data['pixels'].tolist()
-        width, height = 48, 48
+        # width, height = 48, 48
+        width, height = 60, 60
         faces = []
         for pixel_sequence in pixels:
             face = [int(pixel) for pixel in pixel_sequence.split(' ')]
