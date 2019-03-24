@@ -51,6 +51,7 @@ while True:
         except:
             continue
 
+        cv2.imshow("gray", gray_face)
         gray_face = preprocess_input(gray_face, True)
         gray_face = np.expand_dims(gray_face, 0)
         gray_face = np.expand_dims(gray_face, -1)
@@ -59,7 +60,7 @@ while True:
         emotion_label_arg = np.argmax(emotion_prediction)
         emotion_text = emotion_labels[emotion_label_arg]
         emotion_window.append(emotion_text)
-
+        print("emotion_prediction := {} \n emotion_probability = {}\n emotion_label_arg = {}".format(emotion_prediction, emotion_probability, emotion_label_arg))
         if len(emotion_window) > frame_window:
             emotion_window.pop(0)
         try:
