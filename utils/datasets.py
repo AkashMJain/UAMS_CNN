@@ -10,8 +10,8 @@ class DataManager(object):
     """Class for loading fer2013 emotion classification dataset or
         imdb gender classification dataset."""
 
-    def __init__(self, dataset_name='imdb',
-                 dataset_path=None, image_size=(48, 48)):
+    # def __init__(self, dataset_name='imdb', dataset_path=None, image_size=(48, 48)):
+    def __init__(self, dataset_name='imdb', dataset_path=None, image_size=(60, 60)):
 
         self.dataset_name = dataset_name
         self.dataset_path = dataset_path
@@ -44,8 +44,8 @@ class DataManager(object):
         data = pd.read_csv(self.dataset_path)
         print("i think you should reah here")
         pixels = data['pixels'].tolist()
-        width, height = 48, 48
-        # width, height = 60, 60
+        # width, height = 48, 48
+        width, height = 60, 60
         faces = []
         for pixel_sequence in pixels:
             face = [int(pixel) for pixel in pixel_sequence.split(' ')]
